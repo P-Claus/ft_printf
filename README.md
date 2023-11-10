@@ -1,4 +1,4 @@
-# ft_printft (Because ft_putnbr() and ft_putstr() aren’t enough)
+# ft_printf
 ![ft_printf header](https://github.com/P-Claus/ft_printf/blob/main/subject/ft_printf_banner.png)
 
 <p align='center'>
