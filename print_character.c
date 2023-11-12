@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   print_character.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 09:49:58 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/12 10:40:48 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/12 10:20:49 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/12 10:35:33 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_printf(const char *format, ...)
+int	print_character(int c)
 {
-	va_list	ap;
-	int		count;
-
-	va_start(ap, format);
-	count = 0;
-	while (*format)
-	{
-		if (*format == '%')
-			count += print_format(*(++format), ap);
-		else
-			count += write(1, format, 1);
-		++format;
-	}
-	va_end(ap);
-	return (count);
+	return (write(1, &c, 1));
 }

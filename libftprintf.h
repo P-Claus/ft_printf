@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 08:20:31 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/11 08:24:30 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/12 10:39:47 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+
+int     print_format(char specifier, va_list ap);
+int     print_character(int c);
+int     ft_printf(const char *format, ...);
+
 
 #endif
