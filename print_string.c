@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   print_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/11 08:20:31 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/15 19:00:34 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/15 18:57:16 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/15 20:23:53 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdarg.h>
+int	print_string(char *str)
+{
+	int	count;
 
-int     print_format(char specifier, va_list ap);
-int     print_character(int c);
-int     ft_printf(const char *format, ...);
-int	print_string(char *str);
-
-#endif
+	count = 0;
+	while (*str)
+	{
+		print_character((int)*str);
+		count++;
+		str++;
+	}
+	return (count);
+}
