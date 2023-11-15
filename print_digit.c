@@ -1,22 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_digit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 09:43:55 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/15 22:01:02 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/15 21:21:06 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/15 21:49:27 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-#include <stdio.h>
 
-int	main(void)
+int	print_digit(long n, int base)
 {
-	int count;
-	
-	count = ft_printf("The string is: %i\n", 45678);
-	ft_printf("The amount of characters printed is: %i\n", count);
+	int		count;
+	char	*symbols;
+
+	symbols = "0123456789abcdef";
+	if (n < 0)
+	{
+		write(1, "-", 1);
+		return (print_digit(-n, base) + 1);
+	}
+	else if (n < base)
+	{
+		return (print_character(symbols[n]));
+	}
+	else
+	{
+		count = print_digit(n / base, base);
+		return (count + print_digit(n % base, base));
+	}
 }
