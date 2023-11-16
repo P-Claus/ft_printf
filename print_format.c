@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 10:07:47 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/15 21:59:57 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/16 17:25:21 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ int	print_format(char specifier, va_list ap)
 		count += print_character(va_arg(ap, int));
 	else if (specifier == 's')
 		count += print_string(va_arg(ap, char *));
-	else if (specifier == 'i')
+	else if (specifier == 'd' || specifier == 'i')
 		count += print_digit((long)(va_arg(ap, int)), 10);
+	else if (specifier == 'u')
+		count += print_unsigned_int((long)(va_arg(ap, int)), 10);
 	//else if (specifier == 'x')
 	//	count += print_digit(long(va_arg(ap, unsigned int)), 16);
 	else
