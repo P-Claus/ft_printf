@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 21:21:06 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/15 21:49:27 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/16 20:01:28 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 int	print_digit(long n, int base)
 {
-	int		count;
-	char	*symbols;
+	int	count;
 
-	symbols = "0123456789abcdef";
 	if (n < 0)
 	{
 		write(1, "-", 1);
@@ -25,7 +23,7 @@ int	print_digit(long n, int base)
 	}
 	else if (n < base)
 	{
-		return (print_character(symbols[n]));
+		return (print_character(n + '0'));
 	}
 	else
 	{
