@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 10:07:47 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/16 17:25:21 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/16 21:22:32 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ int	print_format(char specifier, va_list ap)
 		count += print_digit((long)(va_arg(ap, int)), 10);
 	else if (specifier == 'u')
 		count += print_unsigned_int((long)(va_arg(ap, int)), 10);
-	//else if (specifier == 'x')
-	//	count += print_digit(long(va_arg(ap, unsigned int)), 16);
+	else if (specifier == 'x')
+		count += print_hex_lower((long)(va_arg(ap, unsigned int)), 16);
+	else if (specifier == 'X')
+		count += print_hex_upper((long)(va_arg(ap, unsigned int)), 16);
 	else
-		count += write(1, &specifier, 1); //writes specifier is it's a weird one (temporary)
+		count += write(1, &specifier, 1); 
 	return (count);
 }
