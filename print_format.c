@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 10:07:47 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/16 21:22:32 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/17 18:36:03 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	print_format(char specifier, va_list ap)
 		count += print_hex_lower((long)(va_arg(ap, unsigned int)), 16);
 	else if (specifier == 'X')
 		count += print_hex_upper((long)(va_arg(ap, unsigned int)), 16);
+	else if (specifier == 'p')
+		count += print_void_pointer((va_arg(ap, void *)), 16);
 	else
 		count += write(1, &specifier, 1); 
 	return (count);
