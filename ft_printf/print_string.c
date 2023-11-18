@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:57:16 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/18 16:52:22 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/18 16:53:25 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	print_string(char *str)
 	count = 0;
 	if (!str)
 	{
-		print_string("NULL"),
+		print_string("NULL");
 		return (6);
 	}
 	if (*str == '\0')
