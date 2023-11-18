@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_character.c                                  :+:      :+:    :+:   */
+/*   print_hex_upper.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/12 10:20:49 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/12 14:34:46 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/16 21:17:34 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/18 16:02:55 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	print_character(int c)
+int	print_hex_upper(long n, int base)
 {
-	return (write(1, &c, 1));
+	int		count;
+	char	*symbols;
+
+	count = 0;
+	symbols = "0123456789ABCDEF";
+	if (n < base)
+		return (print_character(symbols[n]));
+	else
+	{
+		count += print_hex_upper((n / base), base);
+		return (count + print_hex_upper((n % base), base));
+	}
 }

@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_void_pointer.c                               :+:      :+:    :+:   */
+/*   print_hex_lower.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/17 18:02:24 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/17 18:46:58 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/16 20:38:33 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/18 16:06:59 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-#include <stdio.h>
+#include "ft_printf.h"
 
-int	print_void_pointer(void *p, int base)
+int	print_hex_lower(int long n, int base)
 {
-	if (*((int *)p) || *((int *)p) >= 0)
-	{
-		printf("The void pointer stores and int");
-		return (base);
-	}
+	int		count;
+	char	*symbols;
+
+	count = 0;
+	symbols = "0123456789abcdef";
+	if (n < base)
+		return (print_character(symbols[n]));
 	else
 	{
-		printf("The void pointer does not store an int");
-		return (base-16);
+		count += print_hex_lower((n / base), base);
+		return (count + print_hex_lower((n % base), base));
 	}
 }

@@ -6,11 +6,12 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 10:07:47 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/17 18:36:03 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/18 16:08:25 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
+
 int	print_format(char specifier, va_list ap)
 {
 	int	count;
@@ -31,6 +32,6 @@ int	print_format(char specifier, va_list ap)
 	else if (specifier == 'p')
 		count += print_void_pointer((va_arg(ap, void *)), 16);
 	else
-		count += write(1, &specifier, 1); 
+		count += write(1, &specifier, 1);
 	return (count);
 }

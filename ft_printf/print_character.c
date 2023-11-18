@@ -1,27 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_string.c                                     :+:      :+:    :+:   */
+/*   print_character.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 18:57:16 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/15 20:23:53 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/12 10:20:49 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/18 15:16:03 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	print_string(char *str)
+int	print_character(int c)
 {
-	int	count;
-
-	count = 0;
-	while (*str)
-	{
-		print_character((int)*str);
-		count++;
-		str++;
-	}
-	return (count);
+	return (write(1, &c, 1));
 }

@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_hex_lower.c                                  :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 20:38:33 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/16 21:21:06 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/12 09:49:58 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/18 16:03:40 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	print_hex_lower(int long n, int base)
+int	ft_printf(const char *format, ...)
 {
+	va_list	ap;
 	int		count;
-	char	*symbols;
 
+	va_start(ap, format);
 	count = 0;
-	symbols = "0123456789abcdef";
-	if (n < base)
-		return(print_character(symbols[n]));
-	else
+	while (*format)
 	{
-		count += print_hex_lower((n/base), base);
-		return (count + print_hex_lower((n % base), base));
+		if (*format == '%')
+			count += print_format(*++format, ap);
+		else
+			count += write(1, format, 1);
+		++format;
 	}
+	va_end(ap);
+	return (count);
 }

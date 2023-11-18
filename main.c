@@ -6,11 +6,11 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 09:43:55 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/17 18:46:35 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/18 15:15:07 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 #include <stdio.h>
 
 int	main(void)

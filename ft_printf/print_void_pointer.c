@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_digit.c                                      :+:      :+:    :+:   */
+/*   print_void_pointer.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/15 21:21:06 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/16 20:01:28 by pclaus           ###   ########.fr       */
+/*   Created: 2023/11/17 18:02:24 by pclaus            #+#    #+#             */
+/*   Updated: 2023/11/18 16:08:56 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
+#include <stdio.h>
 
-int	print_digit(long n, int base)
+int	print_void_pointer(void *p, int base)
 {
-	int	count;
-
-	if (n < 0)
+	if (*((int *)p) || *((int *)p) >= 0)
 	{
-		write(1, "-", 1);
-		return (print_digit(-n, base) + 1);
-	}
-	else if (n < base)
-	{
-		return (print_character(n + '0'));
+		printf("The void pointer stores and int");
+		return (base);
 	}
 	else
 	{
-		count = print_digit(n / base, base);
-		return (count + print_digit(n % base, base));
+		printf("The void pointer does not store an int");
+		return (base - 16);
 	}
 }
