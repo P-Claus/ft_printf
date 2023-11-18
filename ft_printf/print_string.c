@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:57:16 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/18 16:38:10 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/18 16:45:26 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ int	print_string(char *str)
 	int	count;
 
 	count = 0;
-	if (!str)
-		return (NULL);
+	if (!str || *str == '\0')
+		return (0);
 	while (*str)
 	{
 		print_character((int)*str);

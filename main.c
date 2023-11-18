@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 09:43:55 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/18 15:15:07 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/18 16:43:01 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 
 int	main(void)
 {
-	int 	count = 'h';
-	void *ptr = &count;
+//	int 	count = 'h';
+//	void *ptr = &count;
 //	int	count2;
-//	int	count3;
+	int	count3;
 //	int	count4;
 //	int	count5;
 	
-	ft_printf("The void pointer is: %p\n", ptr);
+//	ft_printf("The void pointer is: %p\n", ptr);
 //	printf("The void pointer is: %p\n", ptr);
 //	ft_printf("The amount of characters printed is: %d\n", count);
 
-//	count3 = printf("The unsigned decimal number is: %u\n", -5678);
-//	printf("The amount of characters printed is: %i\n", count3);
+	count3 = printf("The string is: %s\n", "");
+	printf("The amount of characters printed is: %i\n", count3);
 
 //	count2 = ft_printf("The unsigned decimal number is: %u\n", -5678);
 //	ft_printf("The amount of characters printed is: %i\n", count2);
