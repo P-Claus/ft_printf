@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 10:07:47 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/20 18:44:24 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/20 22:50:06 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int	print_format(char specifier, va_list ap)
 	else if (specifier == 'p')
 	{
 		write(1, "0x", 2);
-		count += print_void_pointer((unsigned long)(va_arg(ap, void *)), 16) + 2;
+		count += 2;
+		count += print_void_pointer((unsigned long)(va_arg(ap, void *)), 16);
 	}
 	else
 		count += write(1, &specifier, 1);
