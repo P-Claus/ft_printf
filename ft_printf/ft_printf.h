@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 08:20:31 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/21 22:00:39 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/21 22:20:53 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	print_digit(long n, int base);
 int	print_unsigned_int(long n, int base);
 int	print_hex_lower(long n, int base);
 int	print_hex_upper(long n, int base);
-int	print_void_pointer(long  n, int base);
-int	put_void_pointer(long n, int base);
+int	print_void_pointer(unsigned long  n, unsigned int base);
+int	put_void_pointer(unsigned long n, unsigned int base);
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/17 18:02:24 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/21 22:03:02 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/21 22:21:32 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	put_void_pointer(long n, int base)
+int	put_void_pointer(unsigned long n, unsigned int base)
 {
 	if (n == 0)
 		return (write(1, "(nil)", 5));
@@ -23,7 +23,7 @@ int	put_void_pointer(long n, int base)
 	}
 }
 
-int	print_void_pointer(long n, int base)
+int	print_void_pointer(unsigned long n, unsigned int base)
 {
 	int		count;
 	char	*symbols;
