@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 09:43:55 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/20 22:30:42 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/11/21 22:01:07 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ int	main(void)
 	int	count1;
 	int	count2;
 	void	*ptr1;
-	void	*ptr2;
+//	void	*ptr2;
 
-	ptr1 = (void*) 4294965;
-	ptr2 = (void*) 4294965;
+	ptr1 = (void*) 0;
+//	ptr2 = (void*) 4294965;
 
 	count1 = ft_printf("The void pointer is: %p\n", ptr1);
 	ft_printf("The total amount of characters printed is: %d\n", count1);
-	count2 = printf("The void pointer is: %p\n", ptr2);
+	count2 = printf("The void pointer is: %p\n", ptr1);
 	printf("The total amount of characters printed is: %d\n", count2);
 	
 //	ft_printf("The void pointer is: %p\n", ptr);
