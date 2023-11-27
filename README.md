@@ -11,3 +11,18 @@
 
 	
 </p>
+
+## Overview
+As my second project in the Campus 19 common core, I chose to do ft_printf. In this project, I have to write a function that works in the same way as the standard printf function. The goal of this project is to work with variadic arguments and learn how they work.
+
+## Mandatory
+The function needs to work with the following format specifiers
+* `%c` - prints a character
+* `%s` - prints a string
+* `%d` - prints a decimal (base 10) number
+* `%i` - prints an integer in base 10
+* `%u` - prints an unsigned decimal (base 10) number
+* `%x` - prints a lowercase hexadecimal number (base 16)
+* `%X` - prints an uppercase hexadecimal number (base 16)
+* `%p` - prints a void pointer in hexadecimal format
+* `%%` - prints a % sign
