@@ -31,7 +31,8 @@ int	print_format(char specifier, va_list ap)
 		count += print_hex_upper((long)(va_arg(ap, unsigned int)), 16);
 	else if (specifier == 'p')
 		count += put_void_pointer((unsigned long)(va_arg(ap, void *)), 16);
-	else if (specifier == '%')
-		count += write(1, &specifier, 1);
+	else
+		count += print_character('%');
+	
 	return (count);
 }
