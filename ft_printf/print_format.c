@@ -6,7 +6,7 @@
 /*   By: pclaus <pclaus@student.s19.be>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/12 10:07:47 by pclaus            #+#    #+#             */
-/*   Updated: 2023/11/27 18:06:33 by pclaus           ###   ########.fr       */
+/*   Updated: 2023/12/05 19:29:48 by pclaus           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,5 @@ int	print_format(char specifier, va_list ap)
 		count += put_void_pointer((unsigned long)(va_arg(ap, void *)), 16);
 	else
 		count += print_character('%');
-	
 	return (count);
 }
