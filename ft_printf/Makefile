@@ -26,25 +26,16 @@ all: $(NAME)
 $(NAME):
 	@cc $(CFLAGS) -c $(SOURCES)
 	@ar rcs $(NAME) $(OBJ_FILES)
-	
-ifndef DISABLE_ECHO
 	@echo "$(GREEN)libftprintf.a has been compiled!"
-endif
 
 clean:
 	@rm -f $(OBJ_FILES)
-
-ifndef DISABLE_ECHO
 	@echo "$(GREEN)The object files have been removed!"
-endif
 
 fclean: 
 	@rm -f $(OBJ_FILES)
 	@rm -f $(NAME)
-
-ifndef DISABLE_ECHO
 	@echo "$(GREEN)The object files and library have been removed!"
-endif
 
 re:	fclean $(NAME)
 
