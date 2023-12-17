@@ -26,3 +26,7 @@ The function needs to work with the following format specifiers
 * `%X` - prints an uppercase hexadecimal number (base 16)
 * `%p` - prints a void pointer in hexadecimal format
 * `%%` - prints a % sign
+
+## Result
+I didn't make the bonus but my code passed the moulinette for the mandatory part. I know the code could be more efficient, but it was only my second project at Campus 19 and I passed.
+![ft_printf header](https://github.com/P-Claus/ft_printf/blob/main/subject/ft_printf_banner.png)
