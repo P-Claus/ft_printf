@@ -13,7 +13,8 @@
 </p>
 
 ## Overview
-As my second project in the Campus 19 common core, I chose to do ft_printf. In this project, I have to write a function that works in the same way as the standard printf function. The goal of this project is to work with variadic arguments and learn how they work.
+As my second project in the Campus 19 common core, I chose to do ft_printf. In this project, I have to write a function that works in the same way as the standard printf function. The goal of this project is to work with variadic arguments and learn how they work.<br><br>
+I didn't make the bonus and I know the code could be more efficient, but it was only my second project at Campus 19 and I passed.
 
 ## Mandatory
 The function needs to work with the following format specifiers
@@ -28,5 +29,4 @@ The function needs to work with the following format specifiers
 * `%%` - prints a % sign
 
 ## Result
-I didn't make the bonus and my code passed the moulinette for the mandatory part. I know the code could be more efficient, but it was only my second project at Campus 19 and I passed.
 ![ft_printf header](https://github.com/P-Claus/ft_printf/blob/main/subject/ft_printf_eval)
